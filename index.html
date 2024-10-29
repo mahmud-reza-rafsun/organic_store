@@ -13,6 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font awesome CDN -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <!-- tailwindcss Configuration file -->
     <script>
         tailwind.config = {
             theme: {
@@ -28,7 +29,7 @@
                         Poppins: 'Poppins',
                     },
                     backgroundImage: {
-                        leaf: "url('./images/leaf01.png')",
+                        bannerBg: "url('./images/leaf01.png')",
                         call_to_action: "url('./images/call.jpg')",
                     },
                 },
@@ -36,7 +37,73 @@
         }
  </script>
 </head>
-<body>
-    
+<body class="font-Poppins">
+    <!-- header section start -->
+    <header>
+      <!-- navbar section -->
+        <nav class="w-11/12 mx-auto">
+            <div class="navbar p-0 py-3">
+                <div class="navbar-start">
+                  <a class="text-xl">
+                    <img class="w-36" src="images/logo.svg" alt="">
+                  </a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 text-base font-medium">
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Home</a></li>
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Everything</a></li>
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Groceries</a></li>
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>About</a></li>
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Contact</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <div class="flex items-center gap-5 text-lg">
+                    <button class="flex items-center gap-2 text-accent font-semibold">
+                      <span>$20.00</span>
+                    </button>
+                    <button class="text-accent font-semibold">
+                      <span><i class="fa-regular fa-cart-shopping"></i></span>
+                    </button>
+                  </div>
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <i class="fa-regular fa-bars text-2xl"></i>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base font-medium right-0">
+                      <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Home</a></li>
+                      <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Everything</a></li>
+                      <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Groceries</a></li>
+                      <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>About</a></li>
+                      <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </nav>
+        <!-- banner-section -->
+         <section class=" bg-bannerBg bg-no-repeat bg-right-bottom">
+          <div class="w-full h-full bg-body bg-opacity-90">
+            <div class="lg:w-9/12 mx-auto py-16 flex sm:flex-row flex-col items-center gap-10">
+              <div class="flex-1">
+                <img src="./images/bannerbg.png" alt="">
+              </div>
+              <div class="flex-1 sm:text-left text-center">
+                <h4 class="text-xl font-semibold my-5">Best Quality Products</h4>
+                <h1 class="lg:text-5xl text-4xl font-semibold leading-tight">Join The Organic Movement!</h1>
+                <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <div class="flex sm:justify-start justify-center">
+                  <button class="flex items-center gap-2 bg-accent text-white px-10 py-4 hover:bg-primary rounded-md transition duration-300">
+                    <i class="fa-regular fa-cart-shopping"></i>
+                    <span>Shop Now</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+         </section>
+    </header>
 </body>
 </html>
